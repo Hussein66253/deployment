@@ -7,15 +7,18 @@ const server = express();
 
 const Port = process.env.Port || 3000;
 
-server.use(express.static('./public'))
+server.use(express.static('./public'));
 
 
-// // http://localhost:3000/test
-// server.get('/test', (request, response) => {
-//   response.send('zzzzzzzzzzzzzzzzz');
+http://localhost:3000/test
+server.get('/test', (request, response) => {
+  response.send('zzzzzzzzzzzzzzzzz');
 
-// });
-// // http://localhost:3000/data
+});
+server.use('*', (request,response) =>{
+  response.send('sorry this page not fond');
+})
+// http://localhost:3000/data
 
 // server.get('/data',(request, response) =>{
 //  let zzzzzzz = [
